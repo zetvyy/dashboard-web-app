@@ -1,10 +1,10 @@
-import Dashboard from "./pages/dashboard";
+import Routers from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
+    <>
+      <Routers />
+    </>
   );
 }
 

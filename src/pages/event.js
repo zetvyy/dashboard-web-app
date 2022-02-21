@@ -9,7 +9,6 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -20,10 +19,11 @@ import { Link } from "react-router-dom";
 import Copyright from "../components/Copyright";
 import AppBar from "../components/AppBar";
 import Drawer from "../components/Drawer";
+import CardEvent from "../components/CardEvent";
 
 const mdTheme = createTheme();
 
-const Dashboard = () => {
+const Event = () => {
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -58,7 +58,7 @@ const Dashboard = () => {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Event
             </Typography>
           </Toolbar>
         </AppBar>
@@ -105,17 +105,11 @@ const Dashboard = () => {
           }}
         >
           <Toolbar />
+          {/* Content - Event */}
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={12} lg={12}>
-                <Paper
-                  sx={{
-                    p: 2,
-                    display: "flex",
-                    flexDirection: "column",
-                    height: 240,
-                  }}
-                ></Paper>
+              <Grid item xs={4} md={4} lg={4}>
+                <CardEvent />
               </Grid>
             </Grid>
             <Copyright sx={{ pt: 4 }} />
@@ -126,4 +120,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Event;

@@ -1,23 +1,22 @@
 import * as React from "react";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import EventIcon from "@mui/icons-material/Event";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 
-export const mainListItems = (
-  <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <EventIcon />
-      </ListItemIcon>
-      <ListItemText primary="Event" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <AddBoxIcon />
-      </ListItemIcon>
-      <ListItemText primary="Add New Event" />
-    </ListItemButton>
-  </React.Fragment>
-);
+export const mainListItems = [
+  {
+    title: "Dashboard",
+    path: "/",
+    icon: <DashboardIcon />,
+  },
+  {
+    title: "Event",
+    path: "/event",
+    icon: <EventIcon />,
+  },
+  {
+    title: "Add New Event",
+    path: "/create/event",
+    icon: <AddBoxIcon />,
+  },
+];

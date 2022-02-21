@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Jessica Jons",
+      "title": "Meeting with CEO",
+      "location": "Senayan City hotel",
+      "participant": "John Doe",
+      "date": "11 September 2019, 15.00 - 17.00",
+      "note": "lorem ipsum dolor sit amet"
+    },
+    {
+      "id": 2,
+      "name": "Mart Murdock",
+      "title": "Webinar Kepak Kebhinekaan",
+      "location": "Senayan City hotel",
+      "participant": "John Doe",
+      "date": "15 September 2019, 15.00 - 17.00",
+      "note": "lorem ipsum dolor sit amet"
+    }
+  ]
+}
