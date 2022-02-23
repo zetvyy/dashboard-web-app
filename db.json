@@ -6,7 +6,7 @@
       "title": "Meeting with CEO",
       "location": "Senayan City hotel",
       "participant": "John Doe",
-      "date": "11 September 2019, 15.00 - 17.00",
+      "date": "11 Sept 2019, 15.00 - 17.00",
       "note": "lorem ipsum dolor sit amet"
     },
     {
@@ -15,7 +15,16 @@
       "title": "Webinar Kepak Kebhinekaan",
       "location": "Senayan City hotel",
       "participant": "John Doe",
-      "date": "15 September 2019, 15.00 - 17.00",
+      "date": "15 Sept 2019, 15.00 - 17.00",
+      "note": "lorem ipsum dolor sit amet komat kamit baca ban sidasi kautama mahanda"
+    },
+    {
+      "id": 3,
+      "name": "Mart Murdock",
+      "title": "Webinar Kepak Kebhinekaan",
+      "location": "Senayan City hotel",
+      "participant": "John Doe",
+      "date": "15 Sept 2019, 15.00 - 17.00",
       "note": "lorem ipsum dolor sit amet"
     }
   ]

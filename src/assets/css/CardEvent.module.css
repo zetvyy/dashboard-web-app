@@ -1,0 +1,29 @@
+.date {
+  position: relative;
+}
+
+.date span {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+.participant {
+  border: 1px solid grey;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper .btn_done {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+}

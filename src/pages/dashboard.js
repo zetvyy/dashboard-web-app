@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 import Copyright from "../components/Copyright";
 import AppBar from "../components/AppBar";
 import Drawer from "../components/Drawer";
+import CardEvent from "../components/CardEvent";
 
 const mdTheme = createTheme();
 
@@ -114,8 +115,20 @@ const Dashboard = () => {
                     display: "flex",
                     flexDirection: "column",
                     height: 240,
+                    width: 1200,
                   }}
                 ></Paper>
+              </Grid>
+              <Grid
+                item
+                xs={4}
+                md={4}
+                lg={4}
+                sx={{
+                  display: "flex",
+                }}
+              >
+                <CardEvent />
               </Grid>
             </Grid>
             <Copyright sx={{ pt: 4 }} />

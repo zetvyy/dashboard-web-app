@@ -8,9 +8,10 @@ import PeopleIcon from "@mui/icons-material/People";
 import Typography from "@mui/material/Typography";
 import { useDispatch, useSelector } from "react-redux";
 import { getEvent } from "../redux/actions/eventActions";
+import Style from "../assets/css/CardEvent.module.css";
 
 const CardEvent = () => {
-  const event = useSelector((state) => state.event.data);
+  const events = useSelector((state) => state.event.data);
 
   const dispatch = useDispatch();
 
@@ -19,26 +20,62 @@ const CardEvent = () => {
   }, []);
 
   return (
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          <EventNoteIcon /> <span>{event[0]?.date}</span>
-        </Typography>
-        <Typography variant="h5" component="div">
-          {event[0]?.title}
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          {event[0]?.location}
-        </Typography>
-        <Typography variant="body2">
-          <PeopleIcon /> participants
-        </Typography>
-        <Typography variant="body2">note: {event[0]?.note}</Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Done</Button>
-      </CardActions>
-    </Card>
+    <>
+      {events.map((event) => {
+        return (
+          <Card sx={{ minWidth: 375, mb: 5, mr: 5 }}>
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+                className={Style.date}
+              >
+                <EventNoteIcon sx={{ fontSize: 25 }} />
+                <span>{event.date}</span>
+              </Typography>
+              <Typography variant="h5" component="div">
+                {event.title}
+              </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                {event.location}
+              </Typography>
+              <Typography variant="body2">
+                <PeopleIcon />{" "}
+                <span className={Style.participant}>{event.participant}</span>
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  mt: 3,
+                  border: "1px solid #f1eaea",
+                  height: "50px",
+                  p: 1,
+                }}
+              >
+                note: {event.note}
+              </Typography>
+            </CardContent>
+            <CardActions className={Style.wrapper}>
+              <Typography
+                sx={{ fontSize: 14, mt: 3 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                created by {event.name}
+              </Typography>
+              <Button
+                size="small"
+                variant="contained"
+                className={Style.btn_done}
+              >
+                Done
+              </Button>
+            </CardActions>
+          </Card>
+        );
+      })}
+    </>
   );
 };
 

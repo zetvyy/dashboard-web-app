@@ -16,7 +16,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { mainListItems } from "../components/ListItems";
 import { Link } from "react-router-dom";
-import Copyright from "../components/Copyright";
 import AppBar from "../components/AppBar";
 import Drawer from "../components/Drawer";
 import CardEvent from "../components/CardEvent";
@@ -108,11 +107,18 @@ const Event = () => {
           {/* Content - Event */}
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              <Grid item xs={4} md={4} lg={4}>
+              <Grid
+                item
+                xs={4}
+                md={6}
+                lg={4}
+                sx={{
+                  display: "flex",
+                }}
+              >
                 <CardEvent />
               </Grid>
             </Grid>
-            <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
       </Box>
